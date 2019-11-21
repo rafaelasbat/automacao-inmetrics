@@ -8,7 +8,7 @@ Funcionalidade: Acessar a tela de Carreiras
   Cenario: CN01CT01 - Acessar tela de Carreiras
     Dado que estou na pagina inicial da Inmetrics
     Quando clicar em Carreiras
-    Entao o sistema deve apresentar o botao Confira nossas vagas
+    Entao o sistema deve apresentar a area de Carreiras
 
   @CT02
   Cenario: CN01CT02 - Acessar tela de Vagas

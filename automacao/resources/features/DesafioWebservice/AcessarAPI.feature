@@ -15,4 +15,4 @@ Funcionalidade: GET em API
   Cenario: CN01CT02 - Validar o status code da resposta do serviço
     Dado que acesso a API de filmes
     Quando envio o GET
-    Entao o status code da resposta é OK
+    Entao o status code da resposta é 200

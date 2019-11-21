@@ -4,8 +4,7 @@
 @Vagas
 Funcionalidade: Filtrar Vagas
 
-  Contexto: Dado que acessei a tela de Vagas da Inmetrics
-  
+ 
   @CT1
   Cenario: CN01CT01 - Filtrar Vagas por Tipo de Vaga
     Dado que estou na tela de Vagas da Inmetrics
