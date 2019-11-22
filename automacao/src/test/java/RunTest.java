@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = { "./resources/features" }, glue = { "steps" }, tags = { "@Vagas", "@CT01" })
+@CucumberOptions(features = { "./resources/features" }, glue = { "steps" }, tags = { "@API" , "@CT02" })
 public class RunTest {
 
 }
