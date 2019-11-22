@@ -5,7 +5,7 @@
 Funcionalidade: Filtrar Vagas
 
  
-  @CT1
+  @CT01
   Cenario: CN01CT01 - Filtrar Vagas por Tipo de Vaga
     Dado que estou na tela de Vagas da Inmetrics
     Quando selecionar o tipo de vaga

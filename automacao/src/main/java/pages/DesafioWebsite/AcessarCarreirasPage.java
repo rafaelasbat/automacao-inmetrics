@@ -18,7 +18,7 @@ public class AcessarCarreirasPage extends BasePage {
 	}
 
 	public void validarAreaCarreiras() {
-		String textoObtido = getText(By.xpath("//*[@id='carreiras']/div/div/a"));
+		String textoObtido = obterTexto(By.xpath("//*[@id='carreiras']/div/div/a"));
 		String textoEsperado = "confira nossas vagas";
 		Assert.assertTrue("Texto obtido: " + textoObtido, textoEsperado.equals(textoObtido));
 	}
@@ -29,7 +29,7 @@ public class AcessarCarreirasPage extends BasePage {
 	}
 
 	public void validarPaginaDeVagas() {
-		String textoObtido = getText(By.id("menu-jobs"));
+		String textoObtido = obterTexto(By.id("menu-jobs"));
 		String textoEsperado = "Vagas";
 		Assert.assertEquals(textoEsperado, textoObtido);
 	}

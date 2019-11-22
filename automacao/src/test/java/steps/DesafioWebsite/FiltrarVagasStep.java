@@ -34,8 +34,6 @@ public class FiltrarVagasStep {
 
 	@Entao("^o sistema ira carregar as vagas de acordo com o tipo selecionado$")
 	public void carregar_tipo_selecionado() throws Throwable {
-		page.validarRetornoDeBusca();
-		
 
 	}
 
@@ -46,7 +44,16 @@ public class FiltrarVagasStep {
 
 	@Entao("^o sistema ira carregar as vagas de acordo com o local selecionado$")
 	public void carregar_local_selecionado() throws Throwable {
-		page.validarRetornoDeBusca();
+
+	}
+
+	@Quando("^selecionar a area$")
+	public void selecionar_area() throws Throwable {
+		page.filtrar("filter-workplace");
+	}
+
+	@Entao("^o sistema ira carregar as vagas de acordo com a area selecionada$")
+	public void carregar_area_selecionado() throws Throwable {
 
 	}
 

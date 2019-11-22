@@ -31,19 +31,23 @@ public class BasePage {
 		wait.until(ExpectedConditions.elementToBeClickable(by)).click();
 	}
 
-	public String getText(By by) {
+	public String obterTexto(By by) {
 
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(by)).getText();
 	}
 
-	public void comboRandom(By by) {
-		WebElement comboBoxTipo = driver.findElement(by);
-		Select comboBox = new Select(comboBoxTipo);
-		int randomIndex = new Random().nextInt(comboBox.getOptions().size());
-		comboBox.selectByIndex(randomIndex);
+	public String comboRandom(String id) {
+		WebElement comboBox = driver.findElement(By.id(id));
+		Select comboBoxFiltro = new Select(comboBox);
+		int randomIndex = new Random().nextInt(comboBoxFiltro.getOptions().size());
+		comboBoxFiltro.selectByIndex(randomIndex);
+
+		String filtro = comboBoxFiltro.getFirstSelectedOption().getText();
+
+		return filtro;
 	}
 
-	public List<HashMap<String, String>> verificarGrid(WebElement tabela) {
+	/* public List<HashMap<String, String>> verificarGrid(WebElement tabela) {
 
 		List<HashMap<String, String>> userTable = new ArrayList<HashMap<String, String>>();
 		List<WebElement> rowElements = tabela.findElements(By.xpath(".//tr"));
@@ -68,9 +72,9 @@ public class BasePage {
 
 		return userTable;
 
-	}
+	} */
 
-	public String verificaTipoResultados(String tipoSelecionado) {
+	/* public String verificaTipoResultados(String tipoSelecionado) {
 
 		WebElement tabela = driver.findElement(By.xpath("/html/body/div[3]/div[6]/table"));
 		List<HashMap<String, String>> grid = verificarGrid(tabela);
@@ -87,8 +91,8 @@ public class BasePage {
 			}
 
 		}
-		return(resultado);
+		return (resultado);
 
-	}
+	} */
 
 }

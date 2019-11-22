@@ -20,25 +20,20 @@ public class FiltrarVagasPage extends BasePage {
 	}
 
 	public void validarPaginaDeVagas() {
-		String textoObtido = getText(By.id("menu-jobs"));
+		String textoObtido = obterTexto(By.id("menu-jobs"));
 		String textoEsperado = "Vagas";
 		Assert.assertEquals(textoEsperado, textoObtido);
 	}
 
 	public String filtrar(String id) {
-		comboRandom(By.id(id));
-		WebElement tipo = driver.findElement(By.id(id));
 		
-		filtro = tipo.getText();
+		filtro = comboRandom(id);
 		
 		return (filtro);
 		
 	}
 	
 	public void validarRetornoDeBusca() {
-
-		resultado = verificaTipoResultados(filtro);
-
-		Assert.assertEquals(filtro, resultado);
+		
 	}
 }
